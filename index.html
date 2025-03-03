@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Oldalunkon Magyarország három csodálatos tavát ismerheti meg amennyiben szeretne szállást foglalni a Balaton, a Tisza-tó vagy a Szelidi tavon. Választható szállások, ellátások egyedi igényekre szabva.">
+    <meta name="author" content="Petz Rebeka">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Olcsó szállások Magyarország három gyönyörű taván</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <img src="img/strandkep.jpg" alt="Családi strand kép">
+        </header>
+
+        <div class="grid-container">
+            <div class="sidebar">
+                <div class="menu">
+                    <a href="#balaton">Balaton</a>
+                    <a href="#tisza-to">Tisza-tó</a>
+                    <a href="#szelidi-to">Szelidi-tó</a>
+                </div>
+
+                <div class="form-container">
+                    <h2>Kérem töltse ki a jelentkezési űrlapot</h2>
+                    <form action="#">
+                        <label for="nev">Név:</label>
+                        <input type="text" id="nev" name="nev" required maxlength="50">
+
+                        <label for="email">E-mail cím:</label>
+                        <input type="email" id="email" name="email" required maxlength="50">
+
+                        <label for="telefon">Telefonszám:</label>
+                        <input type="tel" id="telefon" name="telefon" required maxlength="20">
+
+                        <label for="tavak">Melyik tó érdekli?</label>
+                        <select id="tavak" name="tavak">
+                            <option value="balaton">Balaton</option>
+                            <option value="tisza-to">Tisza-tó</option>
+                            <option value="szelidi-to">Szelidi-tó</option>
+                        </select>
+
+                        <div class="checkbox-group">
+                            <label>Milyen szállást keres?</label>
+                            <input type="checkbox" id="szalloda" name="szallas" value="szalloda"> Szálloda<br>
+                            <input type="checkbox" id="apartman" name="szallas" value="apartman"> Apartmanház<br>
+                            <input type="checkbox" id="kemping" name="szallas" value="kemping"> Kemping<br>
+                        </div>
+
+                        <div class="radio-group">
+                            <label>Milyen ellátás legyen?</label>
+                            <input type="radio" id="teljes" name="ellatas" value="teljes" required> Teljes panzió<br>
+                            <input type="radio" id="fel" name="ellatas" value="fel" required> Félpanzió<br>
+                            <input type="radio" id="reggeli" name="ellatas" value="reggeli" required> Csak reggeli<br>
+                            <input type="radio" id="nem" name="ellatas" value="nem" required> Nem kérek ellátást<br>
+                        </div>
+
+                        <label for="uzenet">Egyéb üzenet:</label>
+                        <textarea id="uzenet" name="uzenet" rows="4"></textarea>
+
+                        <button class="form-submit" type="submit">Mehet</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="content">
+                <section id="balaton" class="section">
+                    <img src="img/balaton.jpg" alt="Balaton">
+                    <h2>Balaton</h2>
+                    <p>A Balaton Magyarország legnagyobb tava, amely turisztikai és üdülő központként is híres. Ez a
+                        régió az egyik legnépszerűbb nyári úti cél az országban, különösen a belföldi turisták körében.
+                        A Balatont gyakran "magyar tengernek" is nevezik, mivel hatalmas vízfelülete miatt olyan érzést
+                        kelt, mintha tengerparton lennénk. Sok látogató keres fel évente a tó környéki strandok, vízi
+                        sportok és szórakozási lehetőségek miatt. A víz sekély, lassan mélyül, ami különösen vonzóvá
+                        teszi családok és gyermekes nyaralók számára. A tó körül rengeteg szálláshely található,
+                        beleértve a kempingeket, apartmanokat és szállodákat is, így mindenki megtalálhatja a neki
+                        megfelelőt. Emellett a Balaton környéke híres borvidékéről is, a környező domboldalakon finom
+                        borokat termelnek, különösen a Badacsonyi borvidéken. A régió történelmi és kulturális
+                        látnivalókkal is bővelkedik, mint például a Tihanyi Apátság vagy a Szigligeti vár. Mindezek
+                        mellett, a Balaton körüli kerékpárút is nagy népszerűségnek örvend, amely lehetőséget nyújt
+                        arra, hogy a látogatók két keréken fedezzék fel a környéket.</p>
+                </section>
+
+                <section id="tisza-to" class="section">
+                    <img src="img/tisza-to.jpg" alt="Tisza-tó">
+                    <h2>Tisza-tó</h2>
+                    <p>A Tisza-tó Magyarország második legnagyobb tava, amelyet mesterségesen alakítottak ki a Tisza
+                        folyón az 1970-es években, eredetileg árvízvédelmi és vízgazdálkodási célokkal. Az évek során
+                        azonban a tó kedvelt turisztikai és rekreációs központtá vált, különösen azok számára, akik a
+                        természet közelségét keresik. A Tisza-tó remek lehetőségeket kínál horgászatra, kajakozásra és
+                        egyéb vízi sportokra, így a vízi élet szerelmesei számára ideális úti cél. Emellett a tó
+                        környezete rendkívül vonzó a természetkedvelők számára, hiszen gazdag növény- és állatvilága,
+                        különösen madárvilága miatt a tó környéke a természetjárók és madármegfigyelők paradicsoma lett.
+                        A Tisza-tavi Ökocentrum Poroszlón lehetőséget nyújt a látogatók számára, hogy mélyebben
+                        megismerjék a tó és környékének élővilágát. A tó körüli kerékpárút lehetőséget ad arra, hogy két
+                        keréken fedezzék fel a tó lenyűgöző tájait és a természet szépségeit. A Tisza-tó különleges
+                        vonzereje abban is rejlik, hogy kevésbé zsúfolt, mint a Balaton, így ideális választás azoknak,
+                        akik nyugodtabb környezetben szeretnének kikapcsolódni.</p>
+                </section>
+
+                <section id="szelidi-to" class="section">
+                    <img src="img/szelidi-to.jpg" alt="Szelidi-tó">
+                    <h2>Szelidi-tó</h2>
+                    <p>A Szelidi-tó egy kisebb, festői tó Magyarország déli részén, Bács-Kiskun megyében, amely csendes,
+                        nyugodt környezetet biztosít a látogatók számára. A tó természetes szépsége és kristálytiszta
+                        vize vonzza azokat, akik a zajos városoktól távol szeretnének kikapcsolódni. A tó környéke
+                        kiválóan alkalmas pihenésre, strandolásra, és különféle vízi sportokra, így kajakozásra és
+                        horgászatra is, ami sok család és természetkedvelő számára teszi vonzóvá a területet. A
+                        Szelidi-tó vize különösen sós, mivel egy szikes tó, és gyógyhatásúnak is tartják, ami hozzájárul
+                        népszerűségéhez. A partján kialakított strandok jól felszereltek, de mégis megőrizték a
+                        természetközeli hangulatot, így a látogatók békés, természetközeli élményben részesülhetnek. A
+                        tó körüli sétányon és kerékpárutakon remek lehetőség nyílik a tó környezetének felfedezésére,
+                        miközben a táj szépségét élvezhetik. A közelben található kempingek és szálláshelyek lehetővé
+                        teszik a hosszabb ott-tartózkodást is, így a Szelidi-tó ideális célpont azok számára, akik
+                        hosszabb, nyugodt pihenésre vágynak.</p>
+                </section>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Olcsó szállások Magyarország három gyönyörű taván - Minden jog fenntartva</p>
+    </footer>
+    </div>
+
+</body>
+
+</html>
