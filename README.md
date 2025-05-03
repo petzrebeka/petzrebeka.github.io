@@ -1,0 +1,2 @@
+# petzrebeka.github.io
+Prooktatás vizsgamunka, HTML, CSS és JavaScript alkalmazásával - weboldal egy győri nonprofit cicamentő egyesületnek
