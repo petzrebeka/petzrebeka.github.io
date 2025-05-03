@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="author" content="Petz Rebeka">
     <meta name="description" content="Puha Praclik Egyesület - Állatmentés és örökbefogadás">
     <title>Puha Praclik - Állatmentő Egyesület</title>
@@ -17,8 +17,15 @@
     <header id="navbar">
         <div class="container">
             <a href="#home" class="logo">
-                <img src="img/Logo.png" alt="" class="logo-img">Puha Praclik</a>
-            <nav>
+                <img src="img/Logo.png" alt="" class="logo-img">Puha Praclik
+            </a>
+
+            <!-- Mobilmenü gomb -->
+            <button class="mobile-menu-btn">☰</button>
+
+            <!-- Navigáció + Overlay -->
+            <div class="mobile-nav-overlay"></div>
+            <nav class="desktop-nav">
                 <a href="#about"><i class="fas fa-paw"></i> Rólunk</a>
                 <a href="#animals"><i class="fas fa-dog"></i> Állataink</a>
                 <a href="#adopt"><i class="fas fa-heart"></i> Örökbefogadás</a>
@@ -32,7 +39,7 @@
     <section id="home" class="hero">
         <!-- Videó konténer -->
         <div class="video-container">
-            <video autoplay muted loop playsinline>
+            <video autoplay muted loop playsinline poster="img/fallback.jpg">
                 <source src="img/cat_video.mp4" type="video/mp4">
                 A böngésződ nem támogatja a videólejátszást.
             </video>

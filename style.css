@@ -70,6 +70,136 @@ body {
     margin-right: 5px;
 }
 
+/* HAMBURGER MENÜ */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1002;
+}
+
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: opacity 0.3s;
+}
+
+/* Mobil nézet stílusai */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .desktop-nav {
+        position: fixed;
+        top: 80px;
+        right: -280px;
+        width: 280px;
+        height: calc(100vh - 80px);
+        background: var(--secondary);
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        padding: 20px;
+        overflow-y: auto;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .desktop-nav.active {
+        right: 0;
+    }
+
+    .desktop-nav a {
+        display: block;
+        margin: 15px 0;
+        padding: 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .desktop-nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-nav-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Logo méret csökkentése */
+.logo-img {
+    height: 30px;
+}
+
+/* Hero rész mobil optimalizálás */
+.hero {
+    height: 60vh;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+/* Állatkártyák */
+.animal-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Támogatás szekció */
+.info-box {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Térkép méret */
+.map-container iframe {
+    height: 300px;
+}
+
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .animal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.8rem;
+    }
+}
+
 /* Logo stílusok */
 .logo {
     display: flex;
@@ -288,7 +418,7 @@ video {
 
 .animal-card img {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: contain;
     object-position: center;
     background-color: #f5f5f5;
