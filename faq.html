@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puha Praclik - Gyakori Kérdések</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="faq.css">
+
+</head>
+
+<body>
+
+    <nav class="secondary-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Főoldal</a></li>
+            <li><a href="success.html"><i class="fas fa-trophy"></i> Sikerek</a></li>
+
+        </ul>
+    </nav>
+
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <h2>Gyakori Kérdések</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Mennyibe kerül az örökbefogadás?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Az örökbefogadás díját az állat egészségi állapota és korától függően 15.000 - 30.000 Ft
+                            között határozzuk meg, ami az állatorvosi költségeket fedezi.</p>
+                    </div>
+                </div>
+
+                <!-- További FAQ elemek -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Milyen dokumentumokra van szükség az örökbefogadáshoz?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Szükséges egy érvényes személyi igazolvány és lakcímkártya, valamint egy szerződés aláírása,
+                            amiben vállalja az állat felelős gondozását.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Van próbaidő az örökbefogadás után?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Igen, 30 napos próbaidőt biztosítunk, hogy megbizonyosodhasson róla, az állat illeszkedik-e a
+                            családjába.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Mennyi idő az örökbefogadási folyamat?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Átlagosan 3-7 munkanap alatt zárjuk le az adminisztrációt, miután minden dokumentumot
+                            megkaptunk. A fizikai átadás a szerződéskötést követő 24 órán belül történik.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Mit tartalmaz az örökbefogadási díj?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A díj tartalmazza:
+                        <ul class="faq-list">
+                            <li>Alapvető oltásokat és chipelést</li>
+                            <li>Első állatorvosi vizsgálatot</li>
+                            <li>6 hónapos utánkövetési támogatást</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hogyan készüljek fel az örökbefogadásra?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Javasoljuk:
+                        <ol class="faq-list">
+                            <li>Állatbarát környezet kialakítását</li>
+                            <li>Alapellátmányok beszerzését (tálak, ágy, játékok)</li>
+                            <li>Családi megbeszélést a felelősségmegosztásról</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Mi történik, ha nem tudom megtartani az állatot?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Visszavételi garanciát biztosítunk - bármikor visszavehetjük az állatot ingyenesen. Kérjük
+                            azonban, hogy előtte vegye fel velünk a kapcsolatot a visszavétel szervezéséhez.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-cta">
+        <div class="container">
+            <div class="cta-box">
+                <h3>Nem találta a választ?</h3>
+                <p>Írjon nekünk bátran, és válaszolunk 24 órán belül!</p>
+                <a href="kapcsolat.html" class="btn cta-btn">
+                    <i class="fas fa-envelope"></i> Üzenet küldése
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Üzenet küldése</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="contactName">Név</label>
+                    <input type="text" id="contactName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">E-mail</label>
+                    <input type="email" id="contactEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactMessage">Üzenet</label>
+                    <textarea id="contactMessage" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Küldés
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Lábléc -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Puha Praclik Nonprofit Egyesület | Minden jog fenntartva</p>
+            <div class="social">
+                <a href="https://www.facebook.com/puhapraclik" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/gyoripuhapraclik?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/watch?v=GYE80R3TGKM" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="faq.js"></script>
+</body>
+
+</html>

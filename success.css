@@ -1,0 +1,234 @@
+/* Alap stílusok */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Navigációs sáv */
+.secondary-nav {
+    background-color: #ee7ef1;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.secondary-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.secondary-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.secondary-nav a:hover {
+    background-color: #b37ca4;
+    transform: translateY(-2px);
+}
+
+/* Szekciók */
+.section {
+    padding: 4rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    text-align: center;
+    color: #ee7ef1;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+}
+
+/* Kártyák  */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.story-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.story-card>div {
+    padding: 1.5rem;
+}
+
+.story-card h3 {
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.story-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Hozzászólások szekció */
+#comments {
+    background-color: var(--light);
+    border-top: 3px solid rgba(0, 0, 0, 0.05);
+}
+
+.comment-form {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.comment-form h2 {
+    margin-bottom: 2rem;
+    color: var(--secondary);
+}
+
+.comment-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.comment-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
+}
+
+/* Hozzászólás gomb */
+.comment-form .btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    background-color: #ee7ef1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-form .btn:hover {
+
+    transform: translateY(-2px);
+    box-shadow: 0 3px 12px rgba(255, 153, 0, 0.3);
+}
+
+.comment-form .btn:active {
+    background: var(--primary);
+    transform: translateY(1px);
+}
+
+/* Lábléc */
+footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social a:hover {
+    color: var(--primary);
+}
+
+
+
+/* Reszponzív design */
+@media (max-width: 768px) {
+    .secondary-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-card {
+        margin: 0 10px;
+    }
+}
