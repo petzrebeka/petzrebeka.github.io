@@ -1,4 +1,12 @@
 /* Alap stílusok */
+:root {
+    --primary: #ee7ef1;
+    --secondary: #9b5388;
+    --light: #fac4e8;
+    --dark: #222;
+    --white: #ffffff;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -10,7 +18,7 @@ body {
 
 /* Navigációs sáv */
 .secondary-nav {
-    background-color: #ee7ef1;
+    background-color: var(--secondary);
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
