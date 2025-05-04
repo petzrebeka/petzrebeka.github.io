@@ -19,13 +19,23 @@
             <a href="#home" class="logo">
                 <img src="img/Logo.png" alt="" class="logo-img">Puha Praclik
             </a>
-
-            <!-- Mobilmenü gomb -->
-            <button class="mobile-menu-btn">☰</button>
-
             <!-- Navigáció + Overlay -->
-            <div class="mobile-nav-overlay"></div>
+
             <nav class="desktop-nav">
+                <a href="#about"><i class="fas fa-paw"></i> Rólunk</a>
+                <a href="#animals"><i class="fas fa-dog"></i> Állataink</a>
+                <a href="#adopt"><i class="fas fa-heart"></i> Örökbefogadás</a>
+                <a href="#support"><i class="fas fa-hand-holding-heart"></i> Támogatás</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Kapcsolat</a>
+            </nav>
+
+            <!-- Hamburger gomb -->
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Mobil navigáció -->
+            <nav class="mobile-nav">
                 <a href="#about"><i class="fas fa-paw"></i> Rólunk</a>
                 <a href="#animals"><i class="fas fa-dog"></i> Állataink</a>
                 <a href="#adopt"><i class="fas fa-heart"></i> Örökbefogadás</a>
@@ -43,7 +53,7 @@
                 <source src="img/cat_video.mp4" type="video/mp4">
                 A böngésződ nem támogatja a videólejátszást.
             </video>
-            <!-- Sötét overlay a szöveg olvashatóságához -->
+            <!-- Sötét overlay -->
             <div class="video-overlay"></div>
         </div>
 
@@ -215,7 +225,7 @@
                     <input type="email" id="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="animal">Állat kiválasztása</label>
+                    <label for="animal">Cica kiválasztása</label>
                     <select id="animal" required>
                         <option value="">-- Válasszon --</option>
                         <option value="Alíz">Alíz</option>

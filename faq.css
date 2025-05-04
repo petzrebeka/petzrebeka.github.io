@@ -66,6 +66,18 @@ h2 {
     color: #ee7ef1;
     margin-bottom: 3rem;
     font-size: 2.2rem;
+    animation-name: colorchange;
+    animation-duration: 4s;
+}
+
+@keyframes colorchange {
+    from {
+        color: #52394b;
+    }
+
+    to {
+        color: #ee7ef1;
+    }
 }
 
 /* GYIK stílusok */
@@ -100,10 +112,6 @@ h2 {
     margin: 0;
     font-size: 1.1rem;
     color: #333;
-}
-
-.faq-question i {
-    transition: transform 0.3s;
 }
 
 .faq-answer {
@@ -146,7 +154,6 @@ footer {
 }
 
 footer .container {
-    display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -234,7 +241,7 @@ footer .container {
     background: white;
     margin: 5% auto;
     padding: 2rem;
-    width: 90%;
+    width: 80%;
     max-width: 600px;
     border-radius: 10px;
     position: relative;
@@ -261,7 +268,7 @@ footer .container {
 #contactForm textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #eee;
+    border: 2px solid #706e6e;
     border-radius: 8px;
     font-size: 1rem;
 }
@@ -270,6 +277,8 @@ footer .container {
     background: #ee7ef1;
     color: white;
     padding: 12px 30px;
+    border-style: none;
+    border-radius: 8px;
 }
 
 #contactForm button:hover {

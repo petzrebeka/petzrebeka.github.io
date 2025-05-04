@@ -1,10 +1,10 @@
 /* Alap stílusok */
 :root {
     --primary: #ee7ef1;
-    --secondary: #b37ca4;
-    --light: #f9f9f9;
+    --secondary: #9b5388;
+    --light: #fac4e8;
     --dark: #222;
-    --white: #fff;
+    --white: #ffffff;
 }
 
 * {
@@ -55,6 +55,7 @@ body {
 
 #navbar a:hover {
     color: var(--primary);
+    color: #b37ca4 !important;
 }
 
 #navbar .logo {
@@ -70,99 +71,68 @@ body {
     margin-right: 5px;
 }
 
-/* HAMBURGER MENÜ */
-.mobile-menu-btn {
+/* Hamburger gomb */
+.hamburger {
     display: none;
     background: none;
     border: none;
     color: var(--white);
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     padding: 10px;
-    z-index: 1002;
+    transition: color 0.3s;
 }
 
-.mobile-nav-overlay {
+.hamburger:hover {
+    color: #b37ca4;
+}
+
+/* Mobil navigáció */
+.mobile-nav {
     display: none;
     position: fixed;
-    top: 80px;
+    top: 85px;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: #b37ca4;
+    flex-direction: column;
+    padding: 8px;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
-    transition: opacity 0.3s;
 }
 
-/* Mobil nézet stílusai */
+.mobile-nav.active {
+    transform: translateY(0);
+}
+
+.mobile-nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.mobile-nav a:hover {
+    color: #b37ca4;
+    background-color: transparent;
+}
+
 @media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-    }
-
     .desktop-nav {
-        position: fixed;
-        top: 80px;
-        right: -280px;
-        width: 280px;
-        height: calc(100vh - 80px);
-        background: var(--secondary);
-        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1000;
-        padding: 20px;
-        overflow-y: auto;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        display: none;
     }
 
-    .desktop-nav.active {
-        right: 0;
-    }
-
-    .desktop-nav a {
+    .hamburger {
         display: block;
-        margin: 15px 0;
-        padding: 12px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
     }
 
-    .desktop-nav a:hover {
-        background: rgba(255, 255, 255, 0.1);
+    .mobile-nav {
+        display: flex;
     }
-
-    .mobile-nav-overlay.active {
-        display: block;
-        opacity: 1;
-    }
-
-    body.menu-open {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-/* Logo méret csökkentése */
-.logo-img {
-    height: 30px;
-}
-
-/* Hero rész mobil optimalizálás */
-.hero {
-    height: 60vh;
-    padding-top: 80px;
-}
-
-.hero h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-}
-
-/* Állatkártyák */
-.animal-card img {
-    height: 250px;
-    object-fit: cover;
 }
 
 /* Támogatás szekció */
@@ -212,20 +182,19 @@ body {
 }
 
 .logo-img {
-    height: 40px;
+    height: 50px;
     width: auto;
     transition: transform 0.3s ease;
+    border-radius: 10px;
 }
 
 .logo:hover .logo-img {
     transform: rotate(10deg) scale(1.1);
 }
 
-
-
 /* Inline link stílus */
 .inline-link {
-    color: #ee7ef1;
+    color: #9b5388;
     font-weight: 600;
     text-decoration: none;
     border-bottom: 2px dotted #b37ca4;
@@ -238,6 +207,12 @@ body {
 }
 
 .action-links {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+ #about p {
     margin-top: 20px;
     font-size: 1.1rem;
     text-align: center;
@@ -256,23 +231,35 @@ body {
     align-items: center;
     text-align: center;
     color: var(--white);
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Videó konténer stílusok */
+/* Videó konténer */
 .video-container {
     position: absolute;
     top: 0;
@@ -300,17 +287,6 @@ video {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-}
-
-.hero {
-    position: relative;
-    height: 80vh;
-    overflow: hidden;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
 }
 
 /* Gombok */
@@ -378,7 +354,6 @@ video {
     text-decoration: underline dotted;
 }
 
-
 /* Szekciók */
 .section {
     padding: 80px 0;
@@ -403,9 +378,8 @@ video {
     padding: 20px;
 }
 
-
 .animal-card {
-    background: white;
+    background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -421,7 +395,7 @@ video {
     height: 300px;
     object-fit: contain;
     object-position: center;
-    background-color: #f5f5f5;
+    background-color: #fac4e8;
     border-radius: 8px 8px 0 0;
     padding: 10px;
 }
@@ -429,9 +403,6 @@ video {
 .animal-card-content {
     padding: 15px;
 }
-
-
-
 
 /* Űrlap */
 form {
@@ -512,7 +483,6 @@ form {
     color: var(--primary);
 }
 
-
 /* Kapcsolat */
 .contact-info {
     text-align: center;
@@ -541,7 +511,6 @@ form {
 footer {
     background-color: var(--secondary);
     color: var(--white);
-    padding: 30px 0;
     text-align: center;
     width: 100%;
 }
@@ -577,12 +546,6 @@ footer .container {
 
 @media (max-width: 992px) {
 
-    /* Állatkártyák */
-    .animal-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Támogatás szekció */
     .support-content {
         gap: 30px;
     }
@@ -590,7 +553,6 @@ footer .container {
 
 @media (max-width: 768px) {
 
-    /* Navigáció */
     #navbar nav.desktop-nav {
         display: none;
     }
@@ -599,7 +561,6 @@ footer .container {
         display: block;
     }
 
-    /* Hero rész */
     .hero {
         height: 60vh;
     }
@@ -608,17 +569,10 @@ footer .container {
         font-size: 2rem;
     }
 
-    /* Állatkártyák */
-    .animal-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Támogatás szekció */
     .support-content {
         grid-template-columns: 1fr;
     }
 
-    /* Kapcsolat térkép */
     .map-container iframe {
         height: 350px;
     }
@@ -626,12 +580,10 @@ footer .container {
 
 @media (max-width: 576px) {
 
-    /* Alapbeállítások */
     body {
         padding-top: 60px;
     }
 
-    /* Hero rész */
     .hero {
         height: 50vh;
         padding-top: 100px;
@@ -645,27 +597,19 @@ footer .container {
         font-size: 1rem;
     }
 
-    /* Állatkártyák */
-    .animal-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Űrlap */
     .form-group input,
     .form-group select {
         padding: 10px;
     }
 
-    /* Támogatás infó */
     .info-box {
         flex-direction: column;
         text-align: center;
     }
 
-    /* Lábléc */
+
     footer .container {
         flex-direction: column;
-        gap: 15px;
     }
 }
 

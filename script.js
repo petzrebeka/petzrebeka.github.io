@@ -8,48 +8,30 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Mobilmenü kezelése
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const desktopNav = document.querySelector('.desktop-nav');
-    const overlay = document.querySelector('.mobile-nav-overlay');
-    const body = document.body;
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
 
-    if (mobileMenuBtn && desktopNav && overlay) {
-        const toggleMenu = (e) => {
-            e.stopPropagation();
-            desktopNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            body.classList.toggle('menu-open');
-        };
+    hamburger.addEventListener('click', function() {
+        mobileNav.classList.toggle('active');
+    });
 
-        // Menü nyitása
-        mobileMenuBtn.addEventListener('click', toggleMenu);
+    // Menü bezárása kattintásra külső területen
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.hamburger') && !event.target.closest('.mobile-nav')) {
+            mobileNav.classList.remove('active');
+        }
+    });
 
-        // Menü bezárása overlay-rel
-        overlay.addEventListener('click', toggleMenu);
-
-        // Menü bezárása kattintáskor kívülre
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.desktop-nav') &&
-                !e.target.matches('.mobile-menu-btn') &&
-                desktopNav.classList.contains('active')) {
-                toggleMenu(e);
-            }
+    // Menü bezárása linkre kattintáskor
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
         });
-
-        // Resize kezelés
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                desktopNav.classList.remove('active');
-                overlay.classList.remove('active');
-                body.classList.remove('menu-open');
-            }
-        });
-    }
+    });
 });
 
-// Sima görgetés a navigációs linkekre (marad változatlan)
+// Sima görgetés a navigációs linkekre 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
